@@ -1,0 +1,2879 @@
+{  
+   "data":[  
+      {  
+         "id":"141",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2017-03-21T18:00:56.000Z",
+            "description":"\"This alert triggers when global permission is defined on a range of ports, grants access to one or more administrative ports, and is detected in a security group.\"",
+            "identifier":"AWS:EC2-040",
+            "name":"Administrative Ports Security Group",
+            "resolution":"\"Generally, it is not advisable to permit access to administrative ports due to the inherent risk of constant enumeration and attack. If you must permit other applications to be accessed by any IP on the internet, please suppress this alert to silence it.For more information, see AWS: Client Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-12T23:25:56.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/141/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"140",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2017-03-21T17:45:53.000Z",
+            "description":"\"This alert triggers when global permission to access all ports (IpProtocol -1) is detected in a security group.\"",
+            "identifier":"AWS:EC2-039",
+            "name":"Alert IpProtocol -1 on Security Group",
+            "resolution":"\"This alert triggers when global permission to access all ports (IpProtocol -1) is detected in a security group. This is dangerous. The best security practice dictates restricting access to service ports solely to known static IP addresses within your control.To remediate this alert, you must reduce the security group access list to contain only known hosts, services, employees, or office static IP addresses is advised. For more information, see AWS: Authorizing Inbound Traffic for Your Linux Instances - Amazon Elastic Compute Cloud.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-12T23:25:38.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/140/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"21",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"AWS EC2 Classic is in use, not virtual private clouds (VPCs). AWS has two types of infrastructure containers. The original AWS infrastructure is called EC2 Classic. VPC is the newer, second-generation of AWS infrastructure.Deploying VPCs will enable theyou to leverage enhanced infrastructure security controls.Note: This alert only triggers in regions that support launching into AWS Classic.\"",
+            "identifier":"AWS:VPC-001",
+            "name":"AWS Classic is Deployed Instead of VPCs",
+            "resolution":"\"Move resources into VPCs and disable EC2 Classic in the region to prevent further use.Learn more about creating and configuring VPCs in the AWS VPC User Guide.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-07T21:28:13.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/21/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"101",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2015-03-11T19:30:28.000Z",
+            "description":"\"The AWS account is not currently leveraging any CloudFront distributions. CloudFront provides scalable, distributed, and inexpensive Content Distribution Network (CDN) within AWS. Using a content delivery network (CDN) can provide a layer of security between your origin content and its destination. CDNs can ensure consistent delivery of content during a distributed denial of service (DDoS) attack or unexpected increase in traffic volume by providing you time to scale infrastructure to meet traffic demands or helping to identify the origin and mitigate the risk of an attack.\"",
+            "identifier":"AWS:CF-001",
+            "name":"AWS CloudFront CDN Not in Use",
+            "resolution":"\"Deploy AWS CloudFront using the AWS Management Console. CloudFront provides a scalable, distributed, and inexpensive CDN within AWS. Click here for more information about implementing AWS CloudFront.\"",
+            "risk_level":"Low",
+            "updated_at":"2017-04-07T21:32:55.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/13.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/101/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"114",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-03-22T16:24:51.000Z",
+            "description":"\"The resource-viewing service AWS Config is not enabled for this AWS account. The AWS Config service provides visibility to user configuration history and configuration change notifications. Along with use of CloudTrail, we consider enabling AWS Config to be a best practice for users.\"",
+            "identifier":"AWS:CONFIG-001",
+            "name":"AWS Config is not enabled",
+            "resolution":"\"Follow the instructions for enabling AWS Config here.\"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-07T20:37:15.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/14.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/114/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"127",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-03-24T18:05:39.000Z",
+            "description":"\"A CloudFormation stack is not configured to notify of status and changes. CloudFormation is a useful automation tool, but it is important to stay on top of the activities of all CloudFormation stacks. Use Amazon Simple Notification Service (SNS) to be notified of changes and status.\"",
+            "identifier":"AWS:CFM-002",
+            "name":"CloudFormation stack configured without SNS topics",
+            "resolution":"\"Create a notification path using SNS.Log into the AWS Management Console. Navigate to the CloudFormation service.In CloudFormation, select the affected stack and click Actions.Select Update Stack and follow the prompts until the Options page comes up.Modify the appropriate notification options to create a new SNS topic or select a pre-existing topic.Configure so that key staff are able to stay up to date on the CloudFormation behavior.\"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-07T20:37:25.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/11.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/127/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"84",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-09T22:33:54.000Z",
+            "description":"\"CloudTrail should be enabled to keep up visibility in all of your AWS resources. This will assist with forensic analysis, auditing, and compliance.\"",
+            "identifier":"AWS:CLT-001",
+            "name":"CloudTrail audit logging not enabled for region",
+            "resolution":"\"To be as secure and auditable as possible, AWS accounts should always enable CloudTrail. CloudTrail offers an API audit-logging capability to AWS users. To maintain consistent best practices, enable It for every account and region. After logging into the AWS Management Console, follow these steps: Choose CloudTrail from the services list.Click Get Started. You will have the choice of using an existing or creating a new S3 bucket destination for the audit logs.Click Advanced.From the list, choose additional options.Click Subscribe.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-07T20:37:35.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/9.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/84/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"129",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-07-27T16:09:43.000Z",
+            "description":"\"CloudTrail should be configured to use server side encryption (SSE) and key management service (KMS). CloudTrail configured to use SSE-KMS provides additional confidentiality controls on log data. To gain access, users must have S3 read permission on the corresponding log bucket and must be granted decrypt permission by the customer-created master keys (CMK) policy.\"",
+            "identifier":"AWS:CLT-002",
+            "name":"CloudTrail log not properly encrypted with SSE-KMS",
+            "resolution":"\"To configure CloudTrail to use SSE-KMS, follow these steps:Open the CloudTrail console.In the left-hand navigation pane, click Trails.Select a specific trail in section 3 section and click Edit (pencil icon).From the KMS key ID drop-down, select an existing CMK. Click Save.You will see a notification message indicating that to decrypt log files, you will need decrypt permissions are required for the specified KMS key. Click Yes.Note: Be sure the CMK is located in the same region as the S3 bucket. Apply a KMS key policy on the selected CMK. This will enable CloudTrail as-a-service to encrypt and decrypt log files using the CMK provided. \"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-07T20:37:46.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/9.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/129/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"135",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-09-07T16:21:43.000Z",
+            "description":"\"CloudTrail logs are not automatically sent to CloudWatch Logs. This signature will facilitate real-time and historic activity logging based on user, API, resource, and IP address. It will also establish alarms and notifications for anomalous or sensitive account activity. The signature generates an alert for any incidents that violate this best security practice.\"",
+            "identifier":"AWS:CLT-004",
+            "name":"CloudTrail logs not integrated with CloudWatch",
+            "resolution":"\"Create this alert to enable log file integration, follow these steps using the AWS Management Console:Sign in to the AWS Management Console.Open the CloudTrail Console.In the left menu, click Trails. In the drop down list, click on each trail where no CloudWatch Logs are defined.Click Save.Navigate to the CloudWatch Logs page, click on Configure. From the list, select an existing log group or define a new one in the field provided.Click Continue.Users should also configure an Identity and Access Management (IAM) Role that will deliver CloudTrail events to CloudWatch logs. In the AWS Management Console, select your chosen IAM Role and create a Policy Name for it. Click Allow to integrate CoudTrail events with CloudWatch logs.For more information, see AWS: CloudTrail Monitoring.\"",
+            "risk_level":"Low",
+            "updated_at":"2017-04-07T20:37:56.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/9.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/135/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"115",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-03-24T15:21:41.000Z",
+            "description":"\"Customer-managed key management service (KMS) keys are not in use. To provide more granular control of your data encryption, we recommend using customer-managed KMS keys instead of AWS-managed KMS keys.\"",
+            "identifier":"AWS:KMS-003",
+            "name":"Customer-Managed Keys Not in Use",
+            "resolution":"\"To resolve this issue, create customer-managed KMS keys and use them for encrypting and decrypting data in the AWS Management Console.For specific instructions, see the AWS: Editing Encryption Keys section of the AWS Developer Guide.\"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-07T21:17:46.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/15.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/115/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"77",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-09T22:33:53.000Z",
+            "description":"\"Elastic Block Store (EBS) volumes do not have volume encryption enabled. EBS volume encryption is a powerful capability that will help protect your data at rest on an EBS volume.\"",
+            "identifier":"AWS:EC2-032",
+            "name":"EBS Volume Encryption Not Enabled",
+            "resolution":"\"To enable EBS volume encryption, you need to create a new, encrypted EBS volume and migrate the old data to the new volume. Learn more about this process in the AWS EBS documentation.\"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-07T21:36:03.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/77/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"120",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-03-24T16:51:44.000Z",
+            "description":"\"Customer-managed key management service (KMS) keys are not in use. To provide more granular control of your data encryption, we recommend using customer-managed KMS keys instead of AWS-managed KMS keys.\"",
+            "identifier":"AWS:EC2-037",
+            "name":"EBS Volume not Encrypted with Customer Managed Key",
+            "resolution":"\"To resolve this issue, create customer-managed KMS keys and use them for encrypting and decrypting data in the AWS Management Console.For specific instructions, see the Editing Keys section of the AWS Developer Guide.\"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-07T21:37:49.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/120/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"17",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Elastic block store (EBS) volumes have no snapshots in recent, 15-day history. These are needed to retain critical system data, security logs, and system state.EBS volume snapshots are an important tool to record system state, security log data, and critical system data at various points in your EC2 instance lifecycle. Snapshots provide point-in-time recovery and review capability that is necessary for many operational and security practices.\"",
+            "identifier":"AWS:EC2-001",
+            "name":"EBS Volumes Does Not Have Recent Snapshot",
+            "resolution":"\"To resolve this issue, you can take \\\"hot\\\" snapshots which do not require un-mounting EBS volumes. Another option involves taking standard snapshots which require you to unmount the volume and then snapshot it prior to re-attaching it.For step-by-step instructions on creating EBS volume snapshots, click here.\"",
+            "risk_level":"Low",
+            "updated_at":"2017-04-07T21:34:39.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/17/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"8",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Distributed API keys to EC2 Instances is a dangerous practice and should be avoided wherever possible.AWS provides native support for enabling EC2 Instance to Service Communication using a secure, authenticated method called Individual Access Management (IAM) Roles. IAM Roles offer AWS users a way to create a role-based access control that easily and securely scales to enable flexible cloud computing.An IAM Role can perform any of the permitted functions defined in its Role Policy. Just as you can permit actions, you can explicitly deny actions. This policy language enables significant combinations of access controls to create highly flexible yet highly secure infrastructure.\"",
+            "identifier":"AWS:EC2-025",
+            "name":"EC2 Instance IAM Role Not Enabled",
+            "resolution":"\"To resolve this issue, log into your AWS Management Console and follow these steps:In the Services menu, click the IAM service.In the left pane, click on Roles.You will see the Create New Role button near the top of the main window, click on it to create your first IAM Role.Enter a friendly name for the role.Click Continue.In the Select Role Type window, you will have several options from which to choose:\\r\\nAWS Service Roles—Permits EC2, CloudHSM, Data Pipeline, or Opsworks to call other AWS ServicesCross-Account AccessIdentity Provider Access—For Identity FederationSelect the policy option that is right for you and proceed to complete the setup by following the prompts.The most common setup is the AWS default that allows for EC2 access to AWS Services. For most, this is a great way to realize flexible, yet secure, EC2 access enabled for your instances. Select this when you launch EC2 instances to automatically inherit these permissions.\"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-10T16:35:50.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/8/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"98",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2015-03-05T20:14:12.000Z",
+            "description":"\"When an EC2 instance is not part of any configured ELB or ASG in the region it may be a risk as a single point of failure.This signature will skip instances that are associated with an ELB or have auto recovery enabled.\"",
+            "identifier":"AWS:EC2-034",
+            "name":"EC2 Single Instance Does Not Appear to be Redundant",
+            "resolution":"\"We encourage using an ASG to automatically replace an EC2 instance in the event of an issue. AWS provides this automated service free of additional charge.If the instance is intentionally single, we suggest configuring auto recovery in the event something does happen to mitigate the impact.\"",
+            "risk_level":"Low",
+            "updated_at":"2017-04-07T21:57:52.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/98/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"86",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-24T19:06:15.000Z",
+            "description":"\"One or more EBS volumes appear to not be attached to an EC2 instance. EBS volumes often persist after an EC2 instance has been terminated. We recommend regular review of these volumes, since they can contain sensitive data related to your company, application, infrastructure, or even users.\"",
+            "identifier":"AWS:EC2-030",
+            "name":"Elastic Block Store (EBS) Volumes Detected and Unattached",
+            "resolution":"\"Periodically review EBS volumes. Archive them to Glacier, remove the volume entirely, or reattach them if they were inadvertently orphaned.To resolve this issue, first log into your AWS Management Console and follow these steps:From the Services menu, select EC2 . In the left pane menu , click on Elastic Block Store \u003e Volumes.Sort using the \\\"State\\\" column and locate the volumes that are not in use.Review the volume information (create date, size, status, etc).Determine if you wish to retain or remove each volume.We recommend taking the time to attach volumes to test instances so you can actively browse the content. While volume names and tags are often generic, the data on each volume will be highly informative as to the volume's previous use.\"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-07T21:31:03.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/86/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"96",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-10-15T23:00:53.000Z",
+            "description":"\"This signature detects and sends an alert if your ELBs are vulnerable to the POODLE SSLv3.0 vulnerability. You can read more about this vulnerability at the official Google security disclosure here: : http://googleonlinesecurity.blogspot.com/2014/10/this-poodle-bites-exploiting-ssl-30.html.The POODLE exploit allows the plain text of secure connections to be calculated by a network attacker, thus exposing previously-thought secure connection transactions to a malicious entity.\"",
+            "identifier":"AWS:ELB-008",
+            "name":"ELB POODLE Vulnerability Detected (CVE-2014-3566)",
+            "resolution":"\"To resolve this problem, follow these steps:Log into your AWS Management Console.From the Services menu, select EC2.In the left pane, navigate to Load Balancers.Choose your Load Balancer.Click on the Listeners tab. Click Change in the Cipher column. Ensure that the radio button for \\\"Predefined Security Policy\\\" is selected.Select the most recent policy from the dropdown menu.Click Save to apply the settings to the listener. Repeat this step for each listener that is using HTTPS or SSL.Repeat for every load balancer servicing HTTPS/SSL connections in your accounts.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-07T21:59:33.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/2.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/96/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"78",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-09T22:33:53.000Z",
+            "description":"\"An ELB is not configured to use secure ciphers for session encryption. Applying the current predefined security policy will provide an up to date SSL configuration for your HTTPS/SSL listener. \"",
+            "identifier":"AWS:ELB-001",
+            "name":"ELB Secure Ciphers Not Configured for Session Encryption",
+            "resolution":"\"To resolve this issue, follow these steps:Log into your AWS Management Console.From the Services menu, select EC2.In the left pane, navigate to Load Balancers.Select the load balancer you wish to reconfigure, and then select Listeners.Locate the SSL-enabled listener ports in the list that appears.Under the \\\"Cipher\\\" column, click Change to enter the configuration menu.Select Predefined Security Policy.Choose the most recent AWS policy available.In the event that one of the ciphers listed in this policy becomes compromised, you may select the Custom Security Policy option and uncheck the cipher in question.For more information, please see AWS ELB Security Policy.\"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-13T16:35:30.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/2.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/78/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"32",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Your SSL certificate is within 45 days of its expiration date. If it expires, many clients will refuse the connection with your service.\"",
+            "identifier":"AWS:ELB-004",
+            "name":"ELB SSL Expires in 45 Days",
+            "resolution":"\"Please begin the process to renew your SSL certificate with your provider, and plan for an update during a convenient maintenance window.\"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-07T22:01:57.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/2.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/32/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"33",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"You have less than 5 days remaining before your SSL certificate expires.\"",
+            "identifier":"AWS:ELB-005",
+            "name":"ELB SSL Expires in 5 Days",
+            "resolution":"\"URGENT. Initiate expedited process to renew your SSL certificate with your provider, and plan for an update during the first available maintenance window. If one is not scheduled before the certificate expires, move the next maintenance forward or schedule an additional window.Failure to renew your certificate and replace it before it expires may cause disruption in your service and adverse user reactions.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-07T22:05:40.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/2.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/33/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"31",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Your SSL certificate is within 90 days of its expiration date.\"",
+            "identifier":"AWS:ELB-003",
+            "name":"ELB SSL Expires in 90 Days",
+            "resolution":"\"Please begin the process to renew your SSL certificate with your provider, and plan for an update during a convenient maintenance window.\"",
+            "risk_level":"Low",
+            "updated_at":"2017-04-07T22:10:43.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/2.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/31/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"112",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-02-19T15:50:23.000Z",
+            "description":"\"One or more of your Elastic Block Storage (ELB) instances supports potentially vulnerable Ephemeral Diffie-Hellman (DHE) in its configuration.DHE was the first public key exchange protocol and is still commonly deployed on ELBS and web servers. We recommend updating your ELB SSL Negotiation Policy configuration to remove DHE ciphers that are potentially vulnerable to 1024-bit and lower breaks\"",
+            "identifier":"AWS:ELB-002",
+            "name":"ELB Supports Vulnerable DHE SSL Negotiation Policy",
+            "resolution":"\"To resolve this issue, follow these steps:Log into your AWS Management Console.From the Services menu, select EC2 .In the left pane, navigate to Load Balancers.Select the load balancer you wish to reconfigure.Select Listeners.Locate the SSL-enabled listener ports in the list that appears.Under the \\\"Cipher\\\" column, click Change to enter the configuration menu.Select Predefined Security Policy.Choose the most recent AWS policy available.In the event that one of the ciphers listed in this policy becomes compromised, you may select the Custom Security Policy option and uncheck the cipher in question. We recommend following the best practices contained in the AWS ELB Security Policy.\"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-07T22:13:31.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/2.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/112/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"36",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Global permission to access the well known administrative TCP port 3389 (RDP) is detected in a security group.\"",
+            "identifier":"AWS:EC2-004",
+            "name":"Global Admin Port Access - RDP (TCP Port 3389) Detected",
+            "resolution":"\"Reduce the permitted IP Addresses or ranges allowed to communicate to destination hosts on TCP port 3389.We recommend utilizing the static office or home IP addresses of your employees as the permitted hosts, or deploying a bastion host with 2-factor authentication if this is infeasible. This bastion host becomes the only permitted IP to communicate with any other nodes inside your account. If you must permit global access to TCP port 3389 (RDP), then you may disable this alert to silence it.For more information on Ports, see AWS: Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:45:43.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/36/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"34",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Global permission to access the well known administrative TCP port 22 (SSH) is detected in a security group.\"",
+            "identifier":"AWS:EC2-002",
+            "name":"Global Admin Port Access - SSH (TCP Port 22) Detected",
+            "resolution":"\"Reduce the permitted IP Addresses or ranges allowed to communicate to destination hosts on TCP port 22. We recommend utilizing the static office or home IP addresses of your employees as the permitted hosts, or deploying a bastion host with 2-factor authentication if this is infeasible. This bastion host becomes the only permitted IP to communicate with any other nodes inside your account. If you must permit global access to TCP port 22 (SSH), then you may suppress this alert.If more information on Ports, see AWS: Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:43:28.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/34/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"35",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Global permission to access the well known administrative TCP port 23 (Telnet) is detected in a security group.\"",
+            "identifier":"AWS:EC2-003",
+            "name":"Global Admin Port Access - Telnet (TCP Port 23) Detected",
+            "resolution":"\"Reduce the permitted IP Addresses or ranges allowed to communicate to destination hosts on TCP port 23.We recommend utilizing the static office or home IP addresses of your employees as the permitted hosts, or deploying a bastion host with 2-factor authentication if this is infeasible. This bastion host becomes the only permitted IP to communicate with any other nodes inside your account. If you must permit global access to TCP port 23 (telnet), then you may disable this alert to silence it.For more information on Ports, see AWS: Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:45:31.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/35/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"46",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Global permission to access the well known administrative TCP port 5500 (VNC Listener) is detected in a security group.\"",
+            "identifier":"AWS:EC2-014",
+            "name":"Global Admin Port Access - VNC Listener (TCP Port 5500) Detected",
+            "resolution":"\"Reduce the permitted IP Addresses or ranges allowed to communicate to destination hosts on TCP port 5500.We recommend utilizing the static office or home IP addresses of your employees as the permitted hosts, or deploying a bastion host with 2-factor authentication if this is infeasible. This bastion host becomes the only permitted IP to communicate with any other nodes inside your account.If you must permit global access to TCP port 5500 (VNC Listener), then you may disable this alert to silence it.For more information on Ports, see AWS: Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:48:38.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/46/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"47",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Global permission to access the well known administrative TCP port 5900 ( VNC Server) is detected in a security group.\"",
+            "identifier":"AWS:EC2-015",
+            "name":"Global Admin Port Access - VNC Server (TCP Port 5900) Detected",
+            "resolution":"\"Reduce the permitted IP Addresses or ranges allowed to communicate to destination hosts on TCP port 5900.We recommend utilizing the static office or home IP addresses of your employees as the permitted hosts, or deploying a bastion host with 2-factor authentication if this is infeasible. This bastion host becomes the only permitted IP to communicate with any other nodes inside your account.If you must permit global access to TCP port 5900 (VNC Server), then you may disable this alert to silence it.For more information on Ports, see AWS: Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:48:53.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/47/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"37",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Global permission to access the well known administrative TCP port 135 (Windows RPC) is detected in a security group.\"",
+            "identifier":"AWS:EC2-005",
+            "name":"Global Admin Port Access - Windows RPC (TCP Port 135) Detected",
+            "resolution":"\"Reduce the permitted IP Addresses or ranges allowed to communicate to destination hosts on TCP port 135.We recommend utilizing the static office or home IP addresses of your employees as the permitted hosts, or deploying a bastion host with 2-factor authentication if this is infeasible. This bastion host becomes the only permitted IP to communicate with any other nodes inside your account.If you must permit global access to TCP port 135 (Windows RPC), then you may disable this alert to silence it.For more information on Ports, see AWS: Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:45:19.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/37/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"38",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Global permission to access the well known administrative TCP port 445 (Windows SMB over TCP) is detected in a security group.\"",
+            "identifier":"AWS:EC2-006",
+            "name":"Global Admin Port Access - Windows SMB (TCP Port 445) Detected",
+            "resolution":"\"Reduce the permitted IP Addresses or ranges allowed to communicate to destination hosts on TCP port 445.We recommend utilizing the static office or home IP addresses of your employees as the permitted hosts, or deploying a bastion host with 2-factor authentication if this is infeasible. This bastion host becomes the only permitted IP to communicate with any other nodes inside your account.If you must permit global access to TCP port 445 (Windows SMB over TCP), then you may disable this alert to silence it.For more information on Ports, see AWS: Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:46:14.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/38/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"54",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:31.000Z",
+            "description":"\"Internet Control Message Protocol (ICMP) is currently permitted on a global scale to your AWS infrastructure. ICMP is used by devices to communicate error messages and status. ICMP is a useful troubleshooting tool, but can also be used to exploit or disrupt operations of systems.\"",
+            "identifier":"AWS:EC2-022",
+            "name":"Global ICMP (Ping) Access Detected",
+            "resolution":"\"We recommend you restrict ICMP solely to systems, services, and IP addresses within your control and not globally allow it.For more information on Ports, see AWS: Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:51:21.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/54/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"50",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Global permission is granted to a security group to access the well known services UDP port 445 (CIFS).\"",
+            "identifier":"AWS:EC2-018",
+            "name":"Global Service Port Access - CIFS (UDP Port 445) Detected",
+            "resolution":"\"Best practice dictates restricting access to service ports solely to known static IP addresses within your control. Reduce the security group access list to contain only known hosts, services, employees, or office static IP addresses is advised. If you must leave port 445 (CIFS) open to the Internet, suppress this alert to silence it.For more information on Ports, see AWS: Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:50:03.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/50/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"56",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:31.000Z",
+            "description":"\"Global permission to access the well known services TCP port 53 (DNS) is detected in a security group.\"",
+            "identifier":"AWS:EC2-024",
+            "name":"Global Service Port Access - DNS (TCP Port 53) Detected",
+            "resolution":"\"Best practice dictates restricting access to service ports solely to known static IP addresses within your control. Reduce the security group access list to contain only known hosts, services, employees, or office static IP addresses. If you must leave port 53 (DNS) open to the Internet, suppress this alert to silence it.For more information on Ports, see AWS: Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:52:01.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/56/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"55",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:31.000Z",
+            "description":"\"Global permission to access the well known services UDP port 53 (DNS) is detected in a security group.\"",
+            "identifier":"AWS:EC2-023",
+            "name":"Global Service Port Access - DNS (UDP Port 53) Detected",
+            "resolution":"\"Restrict access to service ports solely to known static IP addresses within your control. Reduce the security group access list to contain only known hosts, services, employees, or office static IP addresses. If you must leave port 53 (DNS) open to the Internet, suppress this alert to silence it.For more information on Ports, see AWS: Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:51:44.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/55/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"51",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Global permission to access the well known services TCP port 21 (FTP) is detected in a security group.\"",
+            "identifier":"AWS:EC2-019",
+            "name":"Global Service Port Access - FTP (TCP Port 21) Detected",
+            "resolution":"\"Restrict access to service ports solely to known static IP addresses within your control. Reduce the security group access list to contain only known hosts, services, employees, or office static IP addresses. If you must leave port 21 (FTP) open to the Internet, suppress this alert to silence it.For more information on Ports, see AWS: Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:50:17.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/51/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"52",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Global permission to access the well known services TCP port 20 (FTP-Data) is detected in a security group.\"",
+            "identifier":"AWS:EC2-020",
+            "name":"Global Service Port Access - FTP-Data (TCP Port 20) Detected",
+            "resolution":"\"Restrict access to service ports solely to known static IP addresses within your control. Reduce the security group access list to contain only known hosts, services, employees, or office static IP addresses.If you must leave port 20 (FTP-Data) open to the internet, suppress this alert to silence it.For more information on Ports, see AWS: Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:50:38.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/52/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"45",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Global permission to access the well known services TCP port 4333 (MSQL) is detected in a security group.\"",
+            "identifier":"AWS:EC2-013",
+            "name":"Global Service Port Access - MSQL (TCP Port 4333) Detected",
+            "resolution":"\"Restrict access to service ports solely to known static IP addresses within your control. Reduce the security group access list to contain only known hosts, services, employees, or office static IP addresses.If you must leave port 4333 (MSQL) open to the Internet, suppress this alert to silence it.For more information on Ports, see AWS: Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:48:19.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/45/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"41",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Global permission to access the well known services TCP port 3306 (MySQL) is detected in a security group.\"",
+            "identifier":"AWS:EC2-009",
+            "name":"Global Service Port Access - MySQL (TCP Port 3306) Detected",
+            "resolution":"\"Restrict access to service ports solely to known static IP addresses within your control. Reduce the security group access list to contain only known hosts, services, employees, or office static IP addresses. If you must leave TCP port 3306 (MySQL) open to the Internet, suppress this alert to silence it.For more information on Ports, see AWS: Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:46:32.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/41/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"48",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Global permission to access the well known services TCP port 137 (NetBIOS) is detected in a security group.NetBIOS is a legacy protocol developed in the 1980s for very small networks. NetBIOS over TCP/IP allows legacy applications to utilize NetBIOS to communicate over the Internet, however it is a security risk to modern networks. Web services are particularly at risk.\"",
+            "identifier":"AWS:EC2-016",
+            "name":"Global Service Port Access - NetBIOS (UDP Port 137) Detected",
+            "resolution":"\"Restrict access to service ports solely to known static IP addresses within your control. Reduce the security group access list to contain only known hosts, services, employees, or office static IP addresses. If you must leave UDP port 137 (NetBIOS over TCP/IP) open to the Internet, suppress this alert to silence it.For more information on Ports, see AWS: Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:49:07.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/48/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"49",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Global permission to access the well known services UDP port 138 (NetBIOS) is detected in a security group.\"",
+            "identifier":"AWS:EC2-017",
+            "name":"Global Service Port Access - NetBIOS (UDP Port 138) Detected",
+            "resolution":"\"Restrict access to service ports solely to known static IP addresses within your control. Reduce the security group access list to contain only known hosts, services, employees, or office static IP addresses. If you must leave UDP port 138 (NetBIOS over TCP/IP) open to the Internet, suppress this alert to silence it.For more information on Ports, see AWS: Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:49:35.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/49/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"42",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Global permission to access the well known services TCP port 5432 (PostgreSQL) is detected in a security group.\"",
+            "identifier":"AWS:EC2-010",
+            "name":"Global Service Port Access - PostgreSQL (TCP Port 5432) Detected",
+            "resolution":"\"Restrict access to service ports solely to known static IP addresses within your control. Reduce the security group access list to contain only known hosts, services, employees, or office static IP addresses.If you must leave port 5432 (PostgreSQL) open to the Internet, suppress this alert to silence it.For more information on Ports, see AWS: Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:46:56.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/42/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"43",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Global permission is granted to a security group to access the well known services TCP port 1433 (SQLServer).\"",
+            "identifier":"AWS:EC2-011",
+            "name":"Global Service Port Access - SQLServer  (TCP Port 1433) Detected",
+            "resolution":"\"Restricting access to service ports solely to known static IP addresses within your control. Reduce the security group access list to contain only known hosts, services, employees, or office static IP addresses. If you must leave port 1433 (SQLServer) open to the internet, suppress this alert to silence it.For more information on Ports, see AWS: Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:47:31.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/43/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"44",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Global permission is granted to a security group to access the well known services UDP port 1434 (SQLServer ).\"",
+            "identifier":"AWS:EC2-012",
+            "name":"Global Service Port Access - SQLServer  (UDP Port 1434) Detected",
+            "resolution":"\"Restrict access to service ports solely to known static IP addresses within your control. Reduce the security group access list to contain only known hosts, services, employees, or office static IP addresses.If you must leave port 1434 (SQLServer) open to the internet, suppress this alert to silence it.For more information on Ports, see AWS: Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:47:46.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/44/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"53",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Global permission to access the well known services TCP port 25 (SMTP) is detected in a security group.\"",
+            "identifier":"AWS:EC2-021",
+            "name":"Global Services Port Access - SMTP (TCP Port 25) Detected",
+            "resolution":"\"Restrict access to service ports solely to known static IP addresses within your control. Reduce the security group access list to contain only known hosts, services, employees, or office static IP addresses. If you must leave port 25 (SMTP) open to the internet, suppress this alert to silence it.For more information on Ports, see AWS: Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:51:05.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/53/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"10",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"A key has been detected that is older than 90 days.\"",
+            "identifier":"AWS:IAM-007",
+            "name":"IAM Key older than 90-Days Detected",
+            "resolution":"\"The  IAM User responsible for this key should log into the AWS Management Console and generate a new API Keypair. Once they validate it works, the user should inactivate the original keypair. If the original keypair is no longer needed, the user should remove it.\"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-07T23:56:21.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/4.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/10/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"66",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:31.000Z",
+            "description":"\"The Identity Access Management (IAM) policy created when configuring the Evident role has extra permissions.\"",
+            "identifier":"AWS:IAM-011",
+            "name":"IAM Policy Created for Evident Role Has Extra Permissions",
+            "resolution":"\"When creating the relationship between Evident.io and your AWS account, you were asked to use the AWS Managed Security Audit Policy. Please review the role you have created and ensure it provides no more privileges than the Security Audit Policy and there are no resources you have granted Evident elevated privileges.While you may customize this role and restrict Evident.io access, please do not add any permissions to this role without guidance from Evident.We recommend following steps to create role and cross-account access (AWS Identity/ARN):Log into your Amazon Management Console.From the Services menu, select the IAM service.Click Roles on the left pane.Click Create New Role.We recommend that you name the role \\\"Evident-Service-Role\\\"Click Next Step.Click the radio button for Role for Cross-Account Access.Click Provide access between your AWS account and a 3rd party AWS account.Enter the Account ID of the ESP service.Enter the External ID field of the AWS dialog box.Verify that \\\"Require MFA\\\" is not enabled.Click Next Step.Select the Security Audit from Amazon's pre-configured policies.Click Next Step.In the \\\"Review\\\" step, copy the Role ARN string to paste in the last step.Click Create Role.Return to ESP and paste the Role ARN into the ARN field and click Save.\"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-10T16:25:13.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/4.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/66/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"6",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Multi-Factor Authentication (MFA) is not enabled for Identity Access Management (IAM) users.MFA access will help protect your IAM User authentications by requiring a 2-step authentication process upon login. One step will ask for something you know such as an email address and password. The second step will ask for something you have (a token-generating application) to authenticate.This is much more secure than single-step authentication, and is not vulnerable to common password-theft attacks.\"",
+            "identifier":"AWS:IAM-004",
+            "name":"IAM User MFA Not Enabled",
+            "resolution":"\"To resolve this issue, log into your AWS Management Console and follow these steps:In the Services menu, click the IAM service.In the left pane, click on Users.Locate the username you wish to enroll in MFA authentication.Check the box next to the username.Click the Security Credentials tab in the lower section of the window.Under Sign-In Credentials, you will see Multi-Factor Authentication Device: No.Click the Manage MFA Device button and follow the prompts to enroll.Note: You must either purchase a hardware token that AWS will ship to you, or use a software-token such as the ones listed here:https://aws.amazon.com/iam/details/mfa/We recommend using Duo Security's mobile phone application[KS2] , as it supports all major platforms and is built by security industry veterans.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:38:42.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/4.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/6/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"138",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-09-20T18:14:51.000Z",
+            "description":"\"Some Identity Access Management policies are assigned to users, not groups or roles. By default, IAM users, groups, and roles have no access to AWS resources. IAM policies are the means by which privileges are granted to users, groups, or roles.We recommended applying IAM policies to groups and roles, not directly to users. Assigning privileges at the group or role level reduces the complexity of access management as the number of users grow.Reducing access management complexity can reduce opportunity for a user to inadvertently receive or retain excessive privileges.\"",
+            "identifier":"AWS:IAM-013",
+            "name":"IAM User Policies Assigned to User, Not a Group or Role",
+            "resolution":"\"To address this issue, first create an IAM group and assign a policy to it. Follow these steps to do so:Log into the AWS console.From the Services menu, click the IAM service.In the left pane, click Groups.Click Create New Group.Enter a group name.Click Next Step.Select the policies to apply to the group.Click Next Step and finish the group creation process.Next, you should add your users to the IAM group. Follow these steps to do so:Log into the IAM console.In the left pane, click Groups.Select the group you wish to add users to.From the \\\"Group Actions\\\" drop-down menu, click Add Users to Group.Follow the prompts to add users to the group.Finally, follow these steps remove a direct association between a user and policy:Log into the IAM console.In the left pane, click Users.Click on the user with an association with a policy.Click on the Permissions tab.Click the arrow next to the policy to be detached.Click.Detach Policy.Repeat the procedure for each policy to be removed.\"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-10T16:52:05.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/4.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/138/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"110",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-02-17T17:52:31.000Z",
+            "description":"\"CloudFront, a content delivery network (CDN) offered by AWS, is not using a secure cipher for distribution. It is a best security practice to enforce the use of secure ciphers TLSv1.1 and TLSv1.2 in a CloudFront Distribution's certificate configuration. This signature scans for any deviations from this practice and returns the results.\"",
+            "identifier":"AWS:CF-003",
+            "name":"Insecure Ciphers in CloudFront Distribution",
+            "resolution":"\"To resolve this problem:From the AWS Console, select CloudFront.Change the distribution's Viewer Certificate Minimum Protocol to 'TLSv1' (NOTE: this section needs to be qualified)For more information, see the following documents:Amazon CloudFront Adds New Origin Security FeaturesHow to Require HTTPS for Communication between Viewers, CloudFront, and Your Origin\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T16:58:37.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/13.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/110/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"117",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-03-24T15:43:13.000Z",
+            "description":"\"The Key Management Service (KMS) Key rotation function has been disabled.The recommended best security practice is to allow for this KMS rotation of a Customer Master Key (CMK).\"",
+            "identifier":"AWS:KMS-001",
+            "name":"KMS Key Rotation Disabled",
+            "resolution":"\"Enabling the rotation of CMKs will create a new version of the backing key for each rotation. Evident recommends that that CMK keys are rotated every year. To resolve this:Log into your AWS ConsoleClick IAM.Click Encryption Keys.Click on the affected key and select the checkbox Rotate this key every year under Key Rotation.More information on this process can be found here: http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-10T17:00:15.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/15.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/117/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"116",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-03-24T15:34:10.000Z",
+            "description":"\"A Customer Master Key (CMK) is scheduled for deletion. Deleting a Key Management Service (KMS) CMK prevents all associated encrypted data from later being decrypted.Disabling, rather than deleting, a KMS/CMK allows users with access to the key to re-enable it and recover encrypted data in the future.This signature also detects and triggers an alert when encrypted data associated with a CMK that has been disabled or scheduled for deletion.\"",
+            "identifier":"AWS:KMS-002",
+            "name":"KMS Key Scheduled for Deletion",
+            "resolution":"\"The recommended action to remedy this problem is to cancel this deletion. The minimum amount of time required for scheduling a key deletion is seven days allowing for a pending deletion operation to be canceled before the deletion date.For more information, see AWS: Deleting Keys.\"",
+            "risk_level":"Low",
+            "updated_at":"2017-04-10T17:05:01.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/15.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/116/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"132",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-08-10T17:33:41.000Z",
+            "description":"\"The CloudTrail log file validation creates a digest for each log file written to S3. These digests can be used to determine whether a log file was changed, deleted, or unchanged after CloudTrail delivered the file.\"",
+            "identifier":"AWS:CLT-005",
+            "name":"Log file validation not enabled for CloudTrail Log File",
+            "resolution":"\"To enable this alert, perform the following steps: Sign in to the AWS Management Console.Open CloudTrail Console at https://console.aws.amazon.com/cloudtrail.Click Trails on the left navigation pane.Click the target trail inside of the S3 section.Click the edit icon (pencil). Click Advanced.Select Yes for Enable log file validation.Click Save.For more information, see AWS: CloudTrail Documentation.\"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-07T20:37:00.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/9.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/132/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"70",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:31.000Z",
+            "description":"\"This signature detects and triggers an alert when your account is approaching the maximum allowable number of subnets per Virtual Private Cloud (VPC).\"",
+            "identifier":"AWS:VPC-012",
+            "name":"Max Subnets per VPC",
+            "resolution":"\"If you need to increase the maximum allowable number of subnets per VPC, please contact AWS for a service limit increase by following their procedure here.\"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-10T17:10:17.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/70/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"79",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-09T22:33:53.000Z",
+            "description":"\"Ensure no more than 3 IAM Admins exist in any particular account.\"",
+            "identifier":"AWS:IAM-008",
+            "name":"Minimize # of IAM Admins",
+            "resolution":"\"IAM Administrator policies are very powerful and should be tightly controlled. Using the principle of \\\"Least Privilege\\\", most IAM users should only have the rights they need to perform their daily duties. Administrator policies should only be issues to a small group -- ideally 2 or 3 administrators. This signature will fire any time we detect more than 3 IAM users with global Admin policies. To update the policy of an IAM user, log into your AWS Console. Select the \\\"IAM\\\" Service, then select \\\"Users\\\" in the left menu pane. Select the user you wish to edit, and click the \\\"Permissions\\\" tab in the lower pane. Locate the Administrator policy -- it is often labelled \\\"AdministratorAccess--\\\", where the fields in \u003c\u003e are relative to this user and the date the policy was attached/created. Click \\\"Manage Policy\\\", then \\\"back\\\", and select a more specific policy appropriate for the user's role.\"",
+            "risk_level":"High",
+            "updated_at":"2016-02-24T19:59:55.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/4.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/79/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"87",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-08-20T19:00:11.000Z",
+            "description":"\"For encryption of log files, CloudTrail defaults to use of S3 server side encryption (SSE). We recommend adding an additional layer of security by adding MFA Delete to your S3 bucket.This will help to prevent deletion of CloudTrail logs without your explicit authorization. We also encourage you to use a bucket policy that places restrictions on which of your identity access management (IAM) users are allowed to delete S3 objects.\"",
+            "identifier":"AWS:SSS-003",
+            "name":"Multi Factor Authentication (MFA) Delete Not Enabled on S3",
+            "resolution":"\"Enable MFA Delete on the bucket(s) you have configured to receive CloudTrail log files. Note: We recommend that that you do not configure CloudTrail to write into a S3 bucket that resides in a different AWS account.Additional information on how to do this can be found here.\"",
+            "risk_level":"Low",
+            "updated_at":"2017-04-07T21:13:49.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/7.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/87/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"107",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-02-17T16:04:45.000Z",
+            "description":"\"This signature scans subnets in a VPC to verify that all instances are one of the following: internet gateway in a default route, if an instance is attached to a NAT gateway, or if an instance is a private subnet without a NAT instance. \"",
+            "identifier":"AWS:VPC-017",
+            "name":"NAT Gateway not Used",
+            "resolution":"\"To resolve this alert, you should replace NAT instances with Managed NAT Gateways in your private VPC subnet route tables.The Amazon Web Services Managed NAT Gateway provides a scaleable and resilient method for allowing outbound internet traffic from your private VPC subnets. For more information, see AWS: Managed NAT (Network Address Translation) Gateway for AWS.\"",
+            "risk_level":"Medium",
+            "updated_at":"2016-02-24T22:26:18.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/107/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"62",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:31.000Z",
+            "description":"\"Account is near or at the limit of EC2 instances allowed by AWS.\"",
+            "identifier":"AWS:EC2-033",
+            "name":"Nearing limits of EC2 instances",
+            "resolution":"\"Audit EC2 instances. If necessary, contact AWS for a service limit increase by following their procedure. AWS defaults to an adequate maximum number of EC2 instances that can launch per region or type. Evaluate whether that is enough for your needs.\"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-07T20:38:06.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/62/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"64",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:31.000Z",
+            "description":"\"The EC2 instance is nearing the regional limit for allowed elastic IP addresses.\"",
+            "identifier":"AWS:EC2-008",
+            "name":"Nearing regional limit for elastic IP addresses",
+            "resolution":"\"Audit IP address allotment. If you need to add more Elastic IPs in one or more regions, contact AWS and follow their procedure for a service limit increase. AWS defaults provide tolerable limits on the maximum number of Elastic IP addresses that can be assigned in each region.\"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-07T20:38:15.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/64/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"89",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-08-20T19:00:16.000Z",
+            "description":"\"This signature returns a list of healthy instances on selected Elastic Load Balancer. If there are no healthy instances available, this signature returns a Fail alert.\"",
+            "identifier":"AWS:ELB-007",
+            "name":"No Registered Instances in an ELB",
+            "resolution":"\"To address this problem.1. Register instances to an ELB by selecting the affected Load Balancer in the EC2 Service -\u003e Load Balancers Page2. Select the Instances Tab and click Edit Instances. 3. Select one or more instances and then click Save.Equivalent options include the elb register-instances-with-load-balancer AWS CLI command and related API calls in the SDKs.In some cases, ELBs with no registered instances could indicate issues with the an application or back-end instances being unexpectedly terminated. This requires further investigation. Ensure that instances from multiple availability zones are registered with the load balancer to achieve higher availability of your application.\"",
+            "risk_level":"Low",
+            "updated_at":"2016-10-13T00:00:15.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/2.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/89/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"22",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"The default NACL that AWS supplies with a new VPC is insecure by default. Best security practices recommend that you configure your own NACL that only allows ingress traffic that you actually need. This signature triggers an alert if the AWS supplied NACL is in use and in the default configuration.\"",
+            "identifier":"AWS:VPC-009",
+            "name":"Non-Default VPC NACL",
+            "resolution":"\"Amazon VPCs are created with a default, highly-permissive (permit 0.0.0.0/0) Network Access Control List (NACL). This default NACL is risky, as it permits traffic from everywhere on the internet into your highly-secured VPC. Configuring a non-default NACL is highly recommended, and applying that non-default NACL to the subnet is encouraged. Your non-default NACL should be restrictive, only permitting the valid internet traffic you require to operate your applications and services while delivering a high quality of service to your customers. This alert triggers when no valid non-default NACLs are detected inside a particular VPC.For more information, see AWS: Network ACLs.\"",
+            "risk_level":"High",
+            "updated_at":"2016-04-29T18:51:14.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/22/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"1",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Using the \\\"root\\\" account entity is dangerous and should be avoided, if possible. Users should practice \\\"least-privilege\\\", a technique where specific user accounts are created and assigned the minimum privileges necessary to complete their work. Additional privileges can be added to their account as their scope grows, but no user should have the limitless power of the \\\"root\\\" entity. We examine your account to determine if a non-root entity exists, ensuring that you have at least one IAM user configured to perform daily work functions.\"",
+            "identifier":"AWS:GLO-001",
+            "name":"Non-Root User",
+            "resolution":"\"Create an IAM user and assign the basic role or privilege that you deem necessary to perform daily functions. Log into your AWS management consoleClick on the \\\"IAM\\\" service. In the left menu Click on \\\"Users\\\" Click on the button labelled \\\"Create New Users\\\", and enter the username(s) into the dialog box presented. to generate API keys make sure the option \\\"Generate an access key for each User\\\" at the bottom of the dialog box is checkedClick \\\"Create\\\" and save the credentials presented on the next screen. These are your API keys and will not be recoverable if you do not save them at this step. At this point, the user has been created and you can now proceed to add them to groups or set specific permissions as described in these AWS documents here and here. We recommend that you follow this process multiple times to create at least two(2) users: one with admin privilegesand a lesser-privileged IAM user that is used for daily creation or manipulation of elastic resources\"",
+            "risk_level":"High",
+            "updated_at":"2016-02-24T19:59:54.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/4.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/1/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"39",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"A security group has global permission to access any port other than the common web ports TCP 80 and 443.\"",
+            "identifier":"AWS:EC2-007",
+            "name":"Non-Web Ports are Globally Accessible From the Internet",
+            "resolution":"\"Generally, it is not advisable to permit access to non-web services due to the inherent risk of constant enumeration and attack.If you must permit other applications to be accessed by any IP on the Internet, please suppress this alert to silence it.\"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-07T22:52:53.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/39/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"4",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Enforce a strong password policy on IAM console authentications. By default, AWS does not configure the maximal strength password complexity policy on your behalf.\"",
+            "identifier":"AWS:IAM-002",
+            "name":"Password Policy",
+            "resolution":"\"The best security practice is to enforce a strong password policy, including the following: minimum password length should be more than 14 characterspassword should include upper and lower case letterspassword should include numbers and non-alphanumeric characterspassword expiration should be less than 90 daysusers should be allowed to change their own passwordusers should be prevented from reusing old passwords Log into your AWS console.Go to the IAM service. On the left menu, click Account Settings and expand the Password Policy option.Change the Password Policy settings to the following:Enter Minimum password length, which should be at least 14Select Require at least one uppercase letterSelect Require at least one lowercase letterSelect Require one numberSelect Require at least one non-alphanumeric characterSelect Allow users to change their own passwordSelect Enable password expiration and set the expiration period to 90 days.Select Prevent password reuse and set the number of passwords to remember to 1Click Apply password policy.Depending on your corporate policy, you may wish to allow users to change their own passwords. We recommend that you permit users to do so. We recommend that you permit users to do so.\"",
+            "risk_level":"High",
+            "updated_at":"2016-10-18T16:57:42.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/4.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/4/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"113",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-03-22T16:21:26.000Z",
+            "description":"\"The recommended best practice is to disallow VPC peering between two VPCs from different AWS accounts, as this potentially enables unauthorized access to private resources. This signature scans for such occurrences and triggers an alert when one is found.\"",
+            "identifier":"AWS:VPC-018",
+            "name":"Prevent Unauthorized Virtual Private Cloud (VPC) Peering",
+            "resolution":"\"To remediate this problem, you need to remove the problematic peer using the AWS Management Console. Navigate to the VPC Peering Connections Guide. On the guide landing page, click on Working with VPC Peering Connections. From the scenarios listed, choose the one that best fits your needs and follow the detailed instructions. \"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-07T21:16:44.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/113/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"134",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-08-12T15:59:54.000Z",
+            "description":"\"CloudTrail logs a record of every API call made in your AWS account. These logs file are stored in an S3 bucket. Bucket policy or the access control list (ACL) applied to the S3 bucket does not prevent public access to the CloudTrail logs.It is recommended that the bucket policy or access control list (ACL) applied to the S3 bucket that stores CloudTrail logs prevents public access. Allowing public access to CloudTrail log content may aid an adversary in identifying weaknesses in the affected account's use or configuration.\"",
+            "identifier":"AWS:CLT-006",
+            "name":"Public access is allowed to CloudTrail logs",
+            "resolution":"\"To resolve this alert, determine if any public access has been granted to an S3 bucket via an ACL bucket policy. From the AWS Management Console: Go to the AWS CloudTrail console: https://console.aws.amazon.com/cloudtrail/home.In the API activity history pane, click Trails. In the Trails pane, note the bucket names in the S3 bucket column. Go to Amazon S3 console at https://console.aws.amazon.com/s3/home.For each bucket noted in step 3, right-click on the bucket and click Properties.In the Properties pane, click the Permissions tab. The tab shows a list of grants, one row per grant, in the bucket ACL. Each row identifies the grantee and the permissions granted. Ensure no rows exists that have the Grantee set to Everyone or the Grantee set to Any Authenticated User.Note: We recommend that that you do not configure CloudTrail to write into a S3 bucket that resides in a different AWS account.\"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-07T20:51:14.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/9.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/134/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"108",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-02-17T16:47:08.000Z",
+            "description":"\"This signature has detected one or more publicly shared AMIs. This is against best security practices as it poses a risk in exposing sensitive data.\"",
+            "identifier":"AWS:EC2-036",
+            "name":"Public AMI Detected",
+            "resolution":"\"To resolve this problem:1. From the AWS Console: Open the Amazon EC2 console. 2. In the navigation pane, select AMIs. 3. Select your AMI from the list, and then click Modify Image Permissions from the Actions list. 4. Select Private and click Save.For more information, see AWS: Shared AMIs. \"",
+            "risk_level":"Medium",
+            "updated_at":"2016-10-13T00:00:05.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/108/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"125",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-03-24T17:53:37.000Z",
+            "description":"\"Customer-managed KMS keys should be used instead of AWS-managed keys in order to have more granular control over encrypting and encrypting data.\"",
+            "identifier":"AWS:RDS-004",
+            "name":"RDS Database Not Encrypted with Customer Managed KMS Key",
+            "resolution":"\"Encryption of RDS databases is an immutable setting that must be turned on at creation time. To convert a database from unencrypted to encrypted, the database must be backed up and restored onto a new database with encryption.For more information, see Encryption Overview.\"",
+            "risk_level":"High",
+            "updated_at":"2016-04-06T22:52:05.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/10.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/125/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"126",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-03-24T17:58:56.000Z",
+            "description":"\"RDS database instances should not be made accessible to the public internet, outside of your VPC. This is dangerous, as RDS databases should normally be privately accessible only from within your VPC. This signature scans for such incidents and triggers an alert to notify you of a potental security risk.\"",
+            "identifier":"AWS:RDS-005",
+            "name":"RDS Database Publicly Accessible",
+            "resolution":"\"To remove public access to a RDS database:1. Log into the RDS Console in the AWS Console. 2. Select the affected database instance3. Click on Instance Actions - Modify, and select Publicly Accessible and change it to No. For more information: AWS: User VPC Scenarios.\"",
+            "risk_level":"High",
+            "updated_at":"2016-04-13T14:55:01.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/10.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/126/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"100",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2015-03-11T19:30:27.000Z",
+            "description":"\"Detect RDS DB Instances that have not enabled Encryption at Rest\"",
+            "identifier":"AWS:RDS-003",
+            "name":"RDS Encryption Enabled",
+            "resolution":"\"RDS DB Encryption is a powerful capability to protect your data at rest on an RDS DB. Enabling it requires the creation of a new encrypted RDS DB, and migrating the old data to the new DB. You can learn more about this process here.\"",
+            "risk_level":"Low",
+            "updated_at":"2016-10-13T00:00:11.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/10.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/100/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"83",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-09T22:33:54.000Z",
+            "description":"\"Ensure RDS restorable windows are within bounds -- exceeding 5 minutes is problematic.\"",
+            "identifier":"AWS:RDS-002",
+            "name":"RDS Last-Restorable Time Check",
+            "resolution":"\"RDS Restorable Windows are the timeframe to which the latest data is restorable. If these windows begin to exceed 5 minutes, then something is generally lagging in the system and could be broken. This signature alerts users if the 'latest restorable time' stops working as intended, which increases your potential risk if you need to recover data from your backups. Overall, it is expect to see this alert switch from PASS to FAIL on occasion with ESP due to transient delays from AWS.  If this alert fails consistently for one of your accounts, we recommend contacting AWS Support and asking them to take a look. For more information, AWS has information explaining how the \\\"Latest Restorable Time\\\" impacts your ability to restore a DB instance to a specific point in time http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIT.html\"",
+            "risk_level":"Medium",
+            "updated_at":"2016-10-13T00:00:15.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/10.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/83/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"82",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-09T22:33:54.000Z",
+            "description":"\"Ensure RDS Retention Policies meet best-practice of 7 days or more (up to 35 days)\"",
+            "identifier":"AWS:RDS-001",
+            "name":"RDS Retention Policy \u003e 7 Days",
+            "resolution":"\"RDS Retention Policies for Backups are an important part of your DR/BCP strategy. Recovering data from catastrophic failures, malicious attacks, or corruption often requires a several day window of potentially good backup material to leverage. As such, the best practice is to ensure your RDS clusters are retaining at least 7 days of backups, if not more (up to a maximum of 35). To configure your RDS Backup Policy, log into your AWS Console and select \\\"RDS\\\" from the services list. Select \\\"Instances\\\" in the left menu, then select the database instance you wish to configure. From the \\\"Instance Actions\\\" menu, select \\\"Modify\\\". Scroll down to \\\"Backup Retention\\\" options, and set the retention period to at least 7 days. Click \\\"Continue\\\", and you are done!\"",
+            "risk_level":"Medium",
+            "updated_at":"2016-10-13T00:00:10.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/10.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/82/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"122",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-03-24T17:35:14.000Z",
+            "description":"\"The recommended best practice is for customer-managed KMS keys to be used instead of AWS-managed keys to have granular control over encrypting and encrypting data. Redshift clusters should be encrypted with a Customer-managed KMS key.\"",
+            "identifier":"AWS:REDSHIFT-003",
+            "name":"Redshift Cluster Not Encrypted with Customer Managed KMS Key",
+            "resolution":"\"Encryption of Redshift clusters is an immutable setting that must be turned on at creation time. To convert a cluster from unencrypted to encrypted, the database must be unloaded from an old cluster and loaded onto a new cluster with encryption. When setting encryption, select the appropriate Customer-managed KMS key.For more information, see Working with Amazon Redshift Database Encryption.\"",
+            "risk_level":"Medium",
+            "updated_at":"2016-04-06T22:52:05.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/18.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/122/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"124",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-03-24T17:50:19.000Z",
+            "description":"\"It is the recommended best practice that Redshift cluster nodes should not accessible to the public internet, outside of your VPC. This is dangerous, as Redshift databases should normally be privately accessible only from within your VPC. This signature scans for such incidents and triggers an alert when one is discovered.\"",
+            "identifier":"AWS:REDSHIFT-001",
+            "name":"Redshift Cluster Publicly Accessible",
+            "resolution":"\"To remove public access to a Redshift cluster:1. Log into the Redshift Console in the AWS Console.2. Select the affected cluster3. Click Cluster - Modify5. Select Publicly Accessible and set it to No.More information can be found in Creating a Cluster in a VPC.\"",
+            "risk_level":"High",
+            "updated_at":"2016-04-06T22:52:05.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/18.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/124/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"81",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-09T22:33:54.000Z",
+            "description":"\"Isolate S3-Delete privileges to a dedicated account to prevent accidental deletions.\"",
+            "identifier":"AWS:IAM-010",
+            "name":"Restrict S3-Delete IAM Permission",
+            "resolution":"\"User Policies often permit S3-Delete* functions for broad sets of users.This is dangerous, as removal of S3 content can be catastrophic for cloud products and services, their users, and their staff.The best practice for this behavior is to create a dedicated IAM User or Role that allows S3-Delete* functions, and remove these permissions from all other users.To do this, log into the AWS Console andselect \\\"IAM\\\" from the services list. Select \\\"Users\\\",click on the \\\"Permissions\\\" tab in the lower pane, andselect \\\"Attach User Policy\\\".Select the \\\"Custom Policy\\\" radio button, then click \\\"Select\\\".You can now name this policy, and then paste in the following content:{ \\\"Version\\\": \\\"2012-10-17\\\", \\\"Statement\\\": [ { \\\"Effect\\\": \\\"Allow\\\", \\\"Action\\\": [ \\\"s3:DeleteBucket\\\", \\\"s3:DeleteBucketPolicy\\\", \\\"s3:DeleteBucketWebsite\\\", \\\"s3:DeleteObject\\\", \\\"s3:DeleteObjectVersion\\\" ], \\\"Resource\\\": [ \\\"*\\\" ] } ]}\"",
+            "risk_level":"Medium",
+            "updated_at":"2016-02-24T19:59:54.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/4.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/81/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"67",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:31.000Z",
+            "description":"\"The \\\"root\\\" account entity should not have API keys assigned. This entity has significant privilege over your global AWS resources, and is a high-profile target for malicious intended attackers. By avoiding access to the API by the \\\"root\\\" entity, significant risk is avoided on your AWS account.\"",
+            "identifier":"AWS:IAM-012",
+            "name":"Root API Keys Detected",
+            "resolution":"\"To remove root API keys:Log into your AWS management console as the \\\"root\\\" userSelect the account drop-down menu at the top right of the console screen.Click \\\"Security Credentials\\\"Expand the \\\"Access Keys (Access Key ID and Secret Access Key)\\\" optionDeactivate any keys that are present.Once deactivated if no longer used, they should be deleted.Create IAM Users:Select the \\\"IAM\\\" serviceCreate an IAM user with all necessary privileges for you to perform daily functions.If you create an administrative user role, exercise caution in using those keys outside manual interaction with the API. Storing administrative keys in scripts or other software can inadvertently expose them to individuals outside your organization.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-08T00:51:57.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/4.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/67/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"5",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Protect your \\\"root\\\" account entity credentials by enabling Multi-Factor Authentication (MFA) on your AWS account. This will require a 2-step authentication process upon login: one step where you use something you know (email address + password), and a second step where you use something you have (a token-generating application) to authenticate. This is much more secure than single-step authentication, and is not vulnerable to common password-theft attacks.\"",
+            "identifier":"AWS:IAM-003",
+            "name":"Root MFA",
+            "resolution":"\"Log into your AWS console. Click on the IAM Service (under Deployment \u0026 Management). In the main body, you should see \\\"Root Account MFA\\\" marked as Disabled. Please click the button to the right of this, conveniently labelled \\\"Manage MFA Device\\\". Follow the prompts to enroll. You must either purchase a hardware token that AWS will ship to you, or use a software-token such as the ones listed here. We recommend using Duo Security's mobile phone application, as it supports all major platforms and is built by security industry veterans.\"",
+            "risk_level":"High",
+            "updated_at":"2016-02-24T19:59:54.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/4.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/5/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"7",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Use Route53 for scalable, secure DNS service in AWS.\"",
+            "identifier":"AWS:R53-001",
+            "name":"Route53 DNS",
+            "resolution":"\"Route53 DNS provides scalable, distributed, and inexpensive DNS services. This alert checks to see if you are currently leveraging Route53 by examining resource records and zone records. If there are no entries returned, this alert will return as a warning. If you do not use Route53 DNS and do not wish to, please disable this alert. If you are currently managing your own DNS or using a third-party DNS product, please consider leveraging Route53 DNS for your infrastructure. It is resilient against DDoS, DoS, and common malicious attack types. There are other great third-party DNS products out there -- if you are satisfied with your existing product, please disable this alert. If you are not, we encourage you to read more about Route53 and try it out! There is a great introduction to Route53 DNS here.\"",
+            "risk_level":"Low",
+            "updated_at":"2016-03-23T21:44:16.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/6.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/7/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"95",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-08-20T19:00:28.000Z",
+            "description":"\"This signature detects the existence of a Global ACL permissions on S3 Bucket(s) for the All Users group.\"",
+            "identifier":"AWS:SSS-008",
+            "name":"S3 Bucket has Global ACL Permissions enabled",
+            "resolution":"\"To remediate this issue, go to the AWS Console and select the S3 Service. Select the affected bucket and click on Properties. Expand the Permissions section and remove the line with the grantee \\\"Everyone.\\\" More information about managing S3 access with ACLs can be found in the S3 ACL Documentation.\"",
+            "risk_level":"High",
+            "updated_at":"2016-10-13T00:00:14.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/7.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/95/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"103",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2015-06-24T19:53:40.000Z",
+            "description":"\"This signature detects the presence of \\\"Global DELETE\\\" permissions on S3 Bucket(s) which will allow any unauthenticated user to DELETE objects from a bucket. These permissions permit anyone, malicious or not, to DELETE objects from your S3 bucket if they can guess the namespace. Since the S3 service does not protect the namespace other than with ACLs and Bucket Policy, you risk loss or compromise of critical data by leaving this open. This signatures is complementary to AWS:SSS-004 and AWS:SSS-005. These are the values in bucket policy this signature alerts on:\\\"Effect\\\": \\\"Allow\\\"\\\"Principal\\\": \\\"*\\\"\\\"Action\\\": \\\"s3:Delete*\\\"\"",
+            "identifier":"AWS:SSS-012",
+            "name":"S3 Bucket has Global DELETE Permissions enabled via bucket policy",
+            "resolution":"\"Log into your AWS console and select the S3 service. Locate the affected bucket and click on it. Select the \\\"Properties\\\" button in the upper right of the window, and expand the \\\"Permissions\\\" object. Select \\\"Edit Bucket Policy\\\" and consider defining what explicit \\\"Principle\\\" should have the ability to DELETE objects in your S3 bucket. You may also want to specifically limit the \\\"Principle\\\" ability to perform specific DELETE functions, without the wild card. More information on S3 Bucket Policy can be found in the AWS S3 documentation.\"",
+            "risk_level":"High",
+            "updated_at":"2016-10-13T00:00:18.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/7.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/103/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"90",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-08-20T19:00:20.000Z",
+            "description":"\"This signature detects the presence of \\\"Global Edit\\\" ACL permissions on S3 Bucket(s) for the All Users group. These permissions permit anyone, malicious or not, to edit the bucket and/or contents of your S3 bucket if they can guess the namespace. Since the S3 service does not protect the namespace other than with ACLs, you risk exposing critical data by leaving this open.\"",
+            "identifier":"AWS:SSS-004",
+            "name":"S3 Bucket has Global Edit ACL Permissions Enabled",
+            "resolution":"\"Log into your AWS console and select the S3 service. Locate the affected bucket and click on it. Select the \\\"Properties\\\" button in the upper right of the window, and expand the \\\"Permissions\\\" object.  Remove the \\\"Edit\\\" checkbox next to \\\"Everyone\\\".  More information about managing S3 access with ACLs can be found in the S3 ACL Documentation.\"",
+            "risk_level":"High",
+            "updated_at":"2016-10-13T00:00:18.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/7.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/90/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"105",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2015-06-24T19:53:41.000Z",
+            "description":"\"This signature detects the presence of \\\"Global GET\\\" permissions on S3 Bucket(s) which will allow any unauthenticated user to GET objects from a bucket. These permissions permit anyone, malicious or not, to GET objects from your S3 bucket if they can guess the namespace. Since the S3 service does not protect the namespace other than with ACLs and Bucket Policy, you risk loss or compromise of critical data by leaving this open. This signatures is complementary to AWS:SSS-004 and AWS:SSS-005. These are the values in bucket policy this signature alerts on:\\\"Effect\\\": \\\"Allow\\\"\\\"Principal\\\": \\\"*\\\"\\\"Action\\\": \\\"s3:Get*\\\"\"",
+            "identifier":"AWS:SSS-010",
+            "name":"S3 Bucket has Global GET Permissions enabled via bucket policy",
+            "resolution":"\"Log into your AWS console and select the S3 service. Locate the affected bucket and click on it. Select the \\\"Properties\\\" button in the upper right of the window, and expand the \\\"Permissions\\\" object. Select \\\"Edit Bucket Policy\\\" and consider defining what explicit \\\"Principle\\\" should have the ability to GET objects in your S3 bucket. You may also want to specifically limit the \\\"Principle\\\" ability to perform specific GET functions, without the wild card. More information on S3 Bucket Policy can be found in the AWS S3 documentation.\"",
+            "risk_level":"High",
+            "updated_at":"2016-10-13T00:00:07.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/7.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/105/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"94",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-08-20T19:00:25.000Z",
+            "description":"\"This signature detects the presence of \\\"Global List\\\" ACL permissions on S3 Bucket(s) for the All Users group. These permissions permit anyone, malicious or not, to enumerate the contents of your S3 bucket if they can guess the namespace. Since the S3 service does not protect the namespace other than with ACLs and Bucket Policy, you risk exposing critical data by leaving this open.  This signatures is complementary to AWS:SSS-0013. \"",
+            "identifier":"AWS:SSS-006",
+            "name":"S3 Bucket has Global List ACL Permissions enabled",
+            "resolution":"\"Log into your AWS console and select the S3 service. Locate the affected bucket and click on it. Select the \\\"Properties\\\" button in the upper right of the window, and expand the \\\"Permissions\\\" object.  Remove the \\\"List\\\" checkbox next to \\\"Everyone\\\".  More information about managing S3 access with ACLs can be found in the S3 ACL Documentation.\"",
+            "risk_level":"Medium",
+            "updated_at":"2016-10-13T00:00:06.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/7.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/94/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"104",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2015-06-24T19:53:41.000Z",
+            "description":"\"This signature detects the presence of \\\"Global List\\\" permissions on S3 Bucket(s) which will allow any unauthenticated user to LIST the contents of a bucket. These permissions permit anyone, malicious or not, to enumerate the contents of your S3 bucket if they can guess the namespace. Since the S3 service does not protect the namespace other than with ACLs and Bucket Policy, you risk exposing critical data by leaving this open. This signatures is complementary to AWS:SSS-006.  These are the values in bucket policy this signature alerts on:\\\"Effect\\\": \\\"Allow\\\"\\\"Principal\\\": \\\"*\\\"\\\"Action\\\": \\\"s3:List*\\\"\"",
+            "identifier":"AWS:SSS-013",
+            "name":"S3 Bucket has Global List Permissions enabled via bucket policy",
+            "resolution":"\"Log into your AWS console and select the S3 service. Locate the affected bucket and click on it. Select the \\\"Properties\\\" button in the upper right of the window, and expand the \\\"Permissions\\\" object.   Select \\\"Edit Bucket Policy\\\" and consider defining what explicit \\\"Principle\\\" should have the ability to enumerate the contents of your S3 bucket.  You may also want to specifically limit the \\\"Principle\\\" ability to perform specific LIST functions, without the wild card.  More information on S3 Bucket Policy can be found in the AWS S3 documentation.\"",
+            "risk_level":"Medium",
+            "updated_at":"2016-10-13T00:00:17.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/7.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/104/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"102",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2015-06-24T19:53:40.000Z",
+            "description":"\"This signature detects the presence of \\\"Global PUT\\\" permissions on S3 Bucket(s) which will allow any unauthenticated user to PUT objects into a bucket. These permissions permit anyone, malicious or not, to PUT objects into your S3 bucket if they can guess the namespace. Since the S3 service does not protect the namespace other than with ACLs and Bucket Policy, you risk exposing critical data by leaving this open. This signatures is complementary to AWS:SSS-004 and AWS:SSS-005. These are the values in bucket policy this signature alerts on:\\\"Effect\\\": \\\"Allow\\\"\\\"Principal\\\": \\\"*\\\"\\\"Action\\\": \\\"s3:Put*\\\"\"",
+            "identifier":"AWS:SSS-011",
+            "name":"S3 Bucket has Global PUT Permissions enabled via bucket policy",
+            "resolution":"\"Log into your AWS console and select the S3 service. Locate the affected bucket and click on it. Select the \\\"Properties\\\" button in the upper right of the window, and expand the \\\"Permissions\\\" object. Select \\\"Edit Bucket Policy\\\" and consider defining what explicit \\\"Principle\\\" should have the ability to PUT objects in your S3 bucket. You may also want to specifically limit the \\\"Principle\\\" ability to perform specific PUT functions, without the wild card. More information on S3 Bucket Policy can be found in the AWS S3 documentation.\"",
+            "risk_level":"Low",
+            "updated_at":"2016-10-13T00:00:19.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/7.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/102/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"92",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-08-20T19:00:22.000Z",
+            "description":"\"This signature detects the presence of \\\"Global Upload/Delete\\\" ACL permissions on S3 Bucket(s) for the All Users group. These permissions permit anyone, malicious or not, to add, update, or remove the contents of your S3 bucket if they can guess the namespace. Since the S3 service does not protect the namespace other than with ACLs, you risk exposing critical data by leaving this open.\"",
+            "identifier":"AWS:SSS-005",
+            "name":"S3 Bucket has Global Upload and Delete ACL Permissions Enabled",
+            "resolution":"\"Log into your AWS console and select the S3 service. Locate the affected bucket and click on it. Select the \\\"Properties\\\" button in the upper right of the window, and expand the \\\"Permissions\\\" object. Remove the \\\"Upload/Delete\\\" checkbox next to \\\"Everyone\\\".  More information about managing S3 access with ACLs can be found in the S3 ACL Documentation.\"",
+            "risk_level":"High",
+            "updated_at":"2016-02-24T19:59:54.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/7.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/92/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"93",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-08-20T19:00:25.000Z",
+            "description":"\"This signature determines if any S3 bucket(s) has Global View ACL permissions enabled for the All Users group.. These permissions allow external resources to see the permission settings associated to the object.\"",
+            "identifier":"AWS:SSS-007",
+            "name":"S3 Bucket has Global View ACL permissions enabled",
+            "resolution":"\"To disable Global View permissions, you need to log into your AWS console and select the \\\"S3\\\" service. Locate the bucket affected by this risk, and click on the name. Select the \\\"Properties\\\" button in the top right of the window, and then expand the \\\"Permissions\\\" object. Remove the \\\"View\\\" permission box next to \\\"Everyone\\\".  More information about managing S3 access with ACLs can be found in the S3 ACL Documentation.\"",
+            "risk_level":"Low",
+            "updated_at":"2016-02-24T19:59:54.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/7.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/93/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"130",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-07-27T16:13:08.000Z",
+            "description":"\"CloudTrail logs a record of every application program interface (API) call made in your AWS account. These logs file are stored in an S3 bucket. This signature scans your bucket policy or access control list (ACL) that is applied to the S3 bucket to prevent public access to the CloudTrail logs. Allowing public access to CloudTrail log content may make it easier for outside threats to identify weaknesses in the affected account's use or configuration\"",
+            "identifier":"AWS:CLT-003",
+            "name":"S3 Bucket Policy allows public access to CloudTrail logs",
+            "resolution":"\"To prevent public access to an S3 bucket, follow these steps:Go to the AWS CloudTrail console: https://console.aws.amazon.com/cloudtrail/home.In the API activity history pane on the left, click Trails.In the Trails pane, record the bucket names in the S3 bucket column.Go to Amazon S3 console.For each bucket recorded from Step 3, right-click on the bucket listed in the Amazon S3 console and click Properties.In the Properties pane, click the Permissions tab.If the Edit bucket policy button is present, select it.Remove any statement having an effect \\\"Set to Allow\\\" and a principal set to \\\"*\\\".Note: We recommend that that you do not configure CloudTrail to write into a S3 bucket that resides in a different AWS account.For more information, see AWS: Amazon S3 Console Documentation.\"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-07T20:53:05.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/9.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/130/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"97",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-12-15T15:11:44.000Z",
+            "description":"\"S3 Logging provides a way for you to get details about S3 bucket activity.  By default, AWS does not enable logging for S3 buckets.  This additional insight into bucket activity can be useful when troubleshooting and may be requested by AWS Support.  Logging cannot be enabled retroactive to an issue.\"",
+            "identifier":"AWS:SSS-009",
+            "name":"S3 Logging Enabled",
+            "resolution":"\"Detailed instructions on how to enable S3 bucket logging can be found in the Manage S3 Logging section of the AWS documentation.We recommend you implement a policy on a bucket used for logging to help manage the data based on your information retention policies. Bucket lifecycle management tips can be found here.\"",
+            "risk_level":"Low",
+            "updated_at":"2016-10-13T00:00:12.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/7.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/97/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"75",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-09T22:33:53.000Z",
+            "description":"\"Verify Object Versioning is enabled on your S3 Buckets.\"",
+            "identifier":"AWS:SSS-001",
+            "name":"S3 Object Versioning Enabled",
+            "resolution":"\"S3 Object Versioning is an important capability in protecting your data within a bucket. Once you enable Object Versioning, you cannot remove it; you can suspend Object Versioning at any time on a bucket if you do not wish for it to persist. Log into your AWS Console, and select the \\\"S3\\\" service. Select the bucket you wish to enable versioning on, and click the \\\"Properties\\\" tab in the upper right frame. Expand the \\\"Versioning\\\" option, and click \\\"Enable Versioning\\\".\"",
+            "risk_level":"Medium",
+            "updated_at":"2016-10-13T00:00:00.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/7.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/75/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"142",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2017-03-21T18:34:57.000Z",
+            "description":"\"This alert triggers when global permission is defined on a range of ports, grants access to one or more service ports, and is detected in a security group.\"",
+            "identifier":"AWS:EC2-041",
+            "name":"Service Ports Security Group",
+            "resolution":"\"Generally, it is not advisable to permit access to service ports due to the inherent risk of constant enumeration and attack. If you must permit other applications to be accessed by any IP on the internet, please suppress this alert to silence it.For more information, see AWS: Client Ports.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-12T23:26:09.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/142/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"80",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-09T22:33:54.000Z",
+            "description":"\"IAM Administrator roles should never reside on only one individual's IAM account. The risk of that individual losing access to those credentials, through a variety of possibilities, creates undue risk for an organization.There should be at least two IAM Admins configured to prevent a Single-Point-of-Failure (SPoF)\"",
+            "identifier":"AWS:IAM-009",
+            "name":"Single IAM Administrator Detected",
+            "resolution":"\"Ensure no Single-Point-of-Failure in the administrative chain by enabling at least 2 IAM Administrators. To update the policy of an IAM user, log into your AWS Management Console and ensure you have at least two IAM users in an IAM Group that has appropriate administrative privileges.  The Group should be assigned a role; the IAM users shoudl be assigned to a Group.\"",
+            "risk_level":"High",
+            "updated_at":"2017-04-07T23:50:13.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/4.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/80/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"119",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-03-24T16:07:01.000Z",
+            "description":"\"Recommended best practice is for SNS topics to not support cross-account access if the list account IDs are on another account or if the access is exposed to everyone. This signature triggers an alert when it discovers incidents that violate this practice.\"",
+            "identifier":"AWS:SNS-001",
+            "name":"SNS Cross Account Access",
+            "resolution":"\"To remove cross-account access into an SNS queue:1. Log into your AWS Console.2. Under SNS, select the checkbox of the affected Topic and Click on actions - Edit topic policy. 3. Select Only Me in the Basic View, or fix the AWS:SourceOwner string in Advanced View.For more information, see AWS: SNS Topic Policy. \"",
+            "risk_level":"Medium",
+            "updated_at":"2016-04-06T22:52:05.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/17.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/119/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"118",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-03-24T15:50:26.000Z",
+            "description":"\"Recommended best practice is for SQS queues to not support cross-account access if the list account IDs are on another account or if the access is exposed to everyone. This signature triggers an alert when it discovers incidents that violate this practice.\"",
+            "identifier":"AWS:SQS-001",
+            "name":"SQS Cross Account Access",
+            "resolution":"\"To remove cross-account access into an SQS queue:1. Log into your AWS Console.2. Select SQS Queue in the Permissions tab and edit the affected policy.For more information about SQS, see AWS: Access Control Using AWS Identity and Access Management (IAM).\"",
+            "risk_level":"Medium",
+            "updated_at":"2016-04-06T22:52:05.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/16.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/118/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"85",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-09T22:33:54.000Z",
+            "description":"\"This signature detects if an AWS account includes certificates that may be vulnerable to HeartBleed attacks.\"",
+            "identifier":"AWS:ELB-006",
+            "name":"SSL Certificate HeartBleed Vulnerability",
+            "resolution":"\"HeartBleed was a well-publicized SSL attack described here. AWS has encouraged all customers to upload new certificates in the post here.OpenSSL produced a patch on 04/07/2014, and AWS patched all ELBs by 04/08/2014. This signature is left in place for retroactive recognition of this vulnerability, and will alert on any certificate uploaded before April 4th, 2014.Note: this signature does not currently support User Attribution.\"",
+            "risk_level":"High",
+            "updated_at":"2017-02-11T00:03:12.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/2.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/85/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"106",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-02-17T15:57:45.000Z",
+            "description":"\"Instances that are not based on encrypted EBS root volumes pose a security threat due to potential data snooping. This signature scans for AMIs that are based on unencrypted root volume snapshots and returns an alert notifying you of any occurrences that fail this standard.\"",
+            "identifier":"AWS:EC2-035",
+            "name":"Unencrypted AMI",
+            "resolution":"\"To resolve this alert, follow the best security practice by encrypting all of your AMIs. You can find the steps to do this at AWS: Creating an Amazon EBS-Backed Linux AMI.\"",
+            "risk_level":"Medium",
+            "updated_at":"2016-02-24T22:25:58.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/106/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"109",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-02-17T17:24:42.000Z",
+            "description":"\"It is a best security practice to enforce HTTPS-only traffic between a CloudFront distribution and the origin. This signature scans for any deviations from this practice and returns the results.\"",
+            "identifier":"AWS:CF-002",
+            "name":"Unencrypted CloudFront to Origin Server Connection",
+            "resolution":"\"To resolve this problem:1. From the AWS Console, select CloudFront.2. Change the distribution's Origin Protocol Policy and ensure that it is set to 'https-only'. (NOTE: this section needs to be qualified)For more information, see the following documents:Amazon CloudFront Adds New Origin Security FeaturesHow to Require HTTPS for Communication between Viewers, CloudFront, and Your Origin\"",
+            "risk_level":"High",
+            "updated_at":"2016-10-13T00:00:03.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/13.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/109/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"123",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-03-24T17:44:13.000Z",
+            "description":"\"Database encryption is available for Redshift. It is recommended to create Redshift clusters with encryption turned on. Regulations and Compliance such as PCI DSS, SOX and HIPAA generally require encryption of Redshift clusters.\"",
+            "identifier":"AWS:REDSHIFT-002",
+            "name":"Unencrypted Redshift Cluster",
+            "resolution":"\"Encryption of Redshift clusters is an immutable setting that must be turned on at creation time. To convert a cluster from unencrypted to encrypted, the database must be unloaded from an old cluster and loaded onto a new cluster with encryption.For more information, see Working with Amazon Redshift Database Encryption.\"",
+            "risk_level":"High",
+            "updated_at":"2016-04-06T22:52:05.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/18.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/123/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"139",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-10-11T16:29:57.000Z",
+            "description":"\"IAM users can access AWS resources using different types of credentials, such as passwords or access keys. It is recommended that all credentials that have been unused in 90 or greater days be removed or deactivated. This signature scans for incidents of deviance from this best practice and generates an alert.\"",
+            "identifier":"AWS:IAM-015",
+            "name":"Unused IAM Access Keys",
+            "resolution":"\"Disabling or removing unnecessary credentials will reduce the window of opportunity for credentials associated with a compromised or abandoned account to be used.To resolve this alert,Log into the AWS IAM Console.Select the user in the Users panel.Select the Security Credentials tab and click Make Inactive for the access key noted below in the deep inspection. Alternatively, you can delete the access key.For more information, see AWS: IAM Console.\"",
+            "risk_level":"High",
+            "updated_at":"2016-10-12T15:39:28.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/4.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/139/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"136",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-09-07T16:30:14.000Z",
+            "description":"\"IAM users can access AWS resources using different types of credentials, such as passwords or access keys. Best security practice is to remove or deactivate any credentials that have been unused in the last 90 days.  Disabling or removing unnecessary credentials will reduce the window of opportunity for credentials associated with a compromised or abandoned account to be used. This signature scans for any such incidents and generates a report if one is discovered.\"",
+            "identifier":"AWS:IAM-014",
+            "name":"Unused IAM User Credentials",
+            "resolution":"\"To resolve this alert:Open the AWS IAM Console. Go to Users, select the user identified in the alert.Select the Security Credentials tab.Click Manage Password.Click Remove Existing Password to prevent the user from logging in until their credentials can be verified.For more information: see AWS: IAM documentation.\"",
+            "risk_level":"Low",
+            "updated_at":"2016-11-01T17:17:43.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/4.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/136/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"76",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-09T22:33:53.000Z",
+            "description":"\"Detect unused security groups present in your account.\"",
+            "identifier":"AWS:EC2-031",
+            "name":"Unused Security Groups",
+            "resolution":"\"Unused Security Groups pose a risk against your AWS Infrastructure, as they are often unmaintained, legacy, or improperly created. Failing to remove these unused security groups could lead to inadvertent use of them, creating open attack surfaces in your infrastructure. Log into your AWS ConsoleSelect the \\\"EC2\\\" ServiceSelect \\\"Security Groups\\\" under the Network \u0026 Security menu tierIf you wish to remove the security group, you can highlight the offending security group and select \\\"Delete this security group\\\" from under the \\\"Actions\\\" menu.\"",
+            "risk_level":"Medium",
+            "updated_at":"2016-10-13T00:00:18.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/76/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"3",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"If you use the AWS API, you should have at least one IAM user with API keys assigned. Using the \\\"root\\\" entity API keys is considered dangerous practice and is advised against by both AWS and Evident Security staff.\"",
+            "identifier":"AWS:IAM-001",
+            "name":"User API Keys",
+            "resolution":"\"If you have already created at least one IAM user, then make sure to create a valid API keypair for that user. If you have no current IAM users, then create an IAM user and make sure to create a keypair for that user.\"",
+            "risk_level":"Medium",
+            "updated_at":"2016-02-24T19:59:54.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/4.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/3/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"91",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-08-20T19:00:20.000Z",
+            "description":"\"Validate security parameters in CloudFormation templates\"",
+            "identifier":"AWS:CFM-001",
+            "name":"Validate CloudFormation Template",
+            "resolution":"\"We have identified a CloudFormation template that when launched will result in resources allowing global network access most likely from a Security Group or Network Access Control List with a 0.0.0.0/0 rule. We encourage you to review the template and ensure this is the intended behavior.\"",
+            "risk_level":"Low",
+            "updated_at":"2017-04-05T16:36:22.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/11.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/91/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"69",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:31.000Z",
+            "description":"\"VPCs in your account are empty and may not be in use. These can result in resources being unintentionally launched. AWS also imposes a limit to the number of VPCs allowed per region\"",
+            "identifier":"AWS:VPC-011",
+            "name":"Virtual Private Cloud (VPC) Empty",
+            "resolution":"\"As a security best practice, you should remove any VPCs that do not have resources in them. This helps prevent the unintentional launch of resources into this VPC. There is also a limit to the number of VPCs per region you can have. If you have a requirement for an empty VPC, please suppress this alert.\"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-07T22:14:27.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/69/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"68",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:31.000Z",
+            "description":"\"This signature detects if your account is near the limit of VPCs per Region.\"",
+            "identifier":"AWS:VPC-010",
+            "name":"VPC Account Limit",
+            "resolution":"\"AWS provides a reasonable starting limitation for the maximum number of VPCs you can assign in each region.If you approach the limit in a particular region, this alert indicates that you have nearly exhausted your allocation.If you need more VPCs in a region (or all regions), please contact AWS for a service limit increase by following the procedure here.\"",
+            "risk_level":"Medium",
+            "updated_at":"2016-11-03T00:00:02.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/68/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"72",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:31.000Z",
+            "description":"\"This signature detects if your account is near the VPC Customer Gateway limit per VPC per Region.\"",
+            "identifier":"AWS:VPC-014",
+            "name":"VPC Customer Gateway Limit",
+            "resolution":"\"AWS provides a reasonable starting limitation for the maximum number of VPC Customer Gateways you can assign in each VPC. If you approach the limit in a particular VPC, this alert indicates that you have nearly exhausted your allocation. If you need more VPC Customer Gateways in a VPC, please contact AWS for a service limit increase by following their procedure here.\"",
+            "risk_level":"Low",
+            "updated_at":"2016-02-24T19:59:55.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/72/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"28",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"This signature enforces a security best practice of using  VPC Egress Security Groups on ELBs\"",
+            "identifier":"AWS:VPC-007",
+            "name":"VPC Egress ELB",
+            "resolution":"\"Elastic Load Balancers (ELBs) can leverage Security Groups much like EC2 instances inside a VPC. We highly recommend that you configure restrictive Security Groups on ELBs for outgoing traffic.Depending on your business relationship and government statutes, you may be required to restrict access to services from countries carrying international embargoes or sanctions. You may also wish to block traffic from countries that frequently attack or disrupt internet services, especially if you do not engage in international business with those entities.Egress Security Groups are great for this capability and are described here.You may also wish to restrict outbound traffic from your ELB to various types of sites or services depending on restrictions your business observes (company policies, government regulation, etc).\"",
+            "risk_level":"High",
+            "updated_at":"2016-10-13T00:00:06.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/28/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"71",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:31.000Z",
+            "description":"\"This signature detects if your account is approaching the private gateway limitation per VPC per Region.\"",
+            "identifier":"AWS:VPC-013",
+            "name":"VPC Elastic IP Limit",
+            "resolution":"\"AWS provides a reasonable starting limitation for the maximum number of VPC Private Gateways you can assign in each VPC.If you need more VPC Private Gateways in a VPC, please contact AWS for a service limit increase by following their procedure here.\"",
+            "risk_level":"Low",
+            "updated_at":"2016-10-13T00:00:18.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/71/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"29",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"This signature enforces a security best practice of using VPC Security Groups on all ELBs in the VPC.\"",
+            "identifier":"AWS:VPC-008",
+            "name":"VPC ELB Security Groups",
+            "resolution":"\"All Elastic Load Balancers (ELBs) inside VPCs should be assigned to a Security Group. This alert notifies you that at least one of your ELBs is not currently assign to a security group, and is at risk for malicious attack. We highly recommend that you assign a security group and configure restrictive policies to constrain traffic only to legitimate application traffic and services. AWS has excellent documentation on Security Groups inside VPCs here.\"",
+            "risk_level":"High",
+            "updated_at":"2016-10-13T00:00:11.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/29/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"137",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-09-13T22:44:21.000Z",
+            "description":"\"VPC Flow Logs allows an organization to troubleshoot connectivity and security issues in a VPC. Best security practice is to enable VPC Flow Logs on all VPCs. This signature scans all associated VPCs and generates an alert if it discovers a VPC that violates this best practice.\"",
+            "identifier":"AWS:VPC-020",
+            "name":"VPC Flow Logs not enabled",
+            "resolution":"\"To resolve this alert, you must enable your VPC Flow Logs for the associated VPC:Browse to the AWS VPC Console.In the Your VPCs panel, right-click on Create Flow Log and select Create Flow Log.Follow the instructions Create Flow Log wizard. More information can be found here: AWS: Flow Logs\"",
+            "risk_level":"Medium",
+            "updated_at":"2016-09-21T15:52:57.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/137/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"23",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Use VPC Network Access Control Lists (NACLs) to minimize the allowed traffic flows into your VPC.\"",
+            "identifier":"AWS:VPC-002",
+            "name":"VPC Inbound NACLs",
+            "resolution":"\"VPCs permit Layer 3 network traffic filtering leveraging Network Access Control Lists (NACLs). These act similarly to traffic filtering rules you could put on a traditional router or gateway device in a traditional network. We recommend that you configure at least one base NACL for each VPC permitting only the type(s) of traffic you know you will have traversing to and from your VPC. Please review this document from AWS, describing how NACLs work. Since these NACLs are stateless, you need to explicitly permit inbound and outbound communication paths for your services to properly function. The default NACL is globally permitting all inbound and outbound traffic, which is often too lenient. We recommend building a NACL that properly reflects the communication traffic of your application(s) and infrastructure. Denying inbound traffic to port 22 (ssh) when operating homogenous Windows infrastructures is a good example of removing extraneous traffic at the NACL layer. Similarly, when operating homogenous Linux infrastructures, blocking common Windows ports will reduce the amount of portscans, enumeration attempts, and frivilous traffic inbound to your servers for those types of exploitable services.\"",
+            "risk_level":"Medium",
+            "updated_at":"2016-10-13T00:00:21.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/23/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"27",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"This signature enforces a security best practice of using VPC Ingress Security Groups on ELBs\"",
+            "identifier":"AWS:VPC-006",
+            "name":"VPC Ingress ELB",
+            "resolution":"\"Elastic Load Balancers (ELBs) can leverage Security Groups much like EC2 instances inside a VPC. We highly recommend that you configure restrictive Security Groups on ELBs for ingress traffic.Depending on your business relationship and government statutes, you may be required to restrict access to services from countries carrying international embargoes or sanctions.You may also wish to block traffic from countries that frequently attack or disrupt internet services, especially if you do not engage in international business with those entities.Ingress Security Groups are great for this capability and are described here.\"",
+            "risk_level":"High",
+            "updated_at":"2016-11-03T00:00:03.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/27/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"73",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:31.000Z",
+            "description":"\"This signature detects if your account is near the private gateway IPSec limit per VPC per Region.\"",
+            "identifier":"AWS:VPC-015",
+            "name":"VPC Private Gateway IPSec Limit",
+            "resolution":"\"AWS provides a reasonable starting limitation for the maximum number of VPC Private Gateway IPSec connections you can assign in each VPC. If you approach the limit in a particular VPC, this alert indicates that you have nearly exhausted your allocation. If you need more VPC Private Gateway IPSec connections in a particular VPC, please contact AWS for a service limit increase by following their procedure here.\"",
+            "risk_level":"Low",
+            "updated_at":"2016-10-13T00:00:17.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/73/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"133",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-08-10T18:59:31.000Z",
+            "description":"\"This signature detects if your account is near the private gateway limitation per VPC per Region.\"",
+            "identifier":"AWS:VPC-019",
+            "name":"VPC Private Gateway Limit",
+            "resolution":"\"AWS provides a reasonable starting limitation for the maximum number of VPC Private Gateways you can assign in each VPC.If you approach the limit in a particular VPC, this alert indicates that you have nearly exhausted your allocation.If you need more VPC Private Gateways in a VPC, please contact AWS for a service limit increase by following their procedure here.\"",
+            "risk_level":"Low",
+            "updated_at":"2016-08-18T00:00:12.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/133/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"111",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-02-17T18:15:15.000Z",
+            "description":"\"This signature detects if your account is near the EC2 Security Group Limit for your security group in a VPC.\"",
+            "identifier":"AWS:VPC-016",
+            "name":"VPC Security Group Limit",
+            "resolution":"\"AWS provides a limitation of 500 for the maximum number of EC2 security groups you can create in a VPC. If you approach the limit in a particular VPC, this alert indicates that you have nearly exhausted your allocation.If you need more EC2 security groups in a VPC (or all regions), please contact AWS for a service limit increase by following the procedure: AWS: Increasing AWS Service Limits.\"",
+            "risk_level":"Medium",
+            "updated_at":"2016-10-13T00:00:07.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/111/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"131",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2016-08-10T17:23:12.000Z",
+            "description":"\"The assigned security groups for a VPC are not configured to restrict traffic and reduce the exposure of its resources. A security group was not specified when a VPC instance was launched. If the instance is not assigned a specific security group when it is created, AWS automatically assigns it to the default security group.The default security group that comes with a VPC will deny all inbound traffic, allow all outbound traffic, and allow all traffic between instances assigned to the security group.\"",
+            "identifier":"AWS:EC2-038",
+            "name":"VPC Security Group Not Specified",
+            "resolution":"\"While the default security group cannot be deleted, it can be configured in a way to mitigate risk and increase security:To resolve this alert, take the following steps:Identify the AWS resources that exist within the default security group.Create a set of least privilege security groups for those resources.Place the resources in those security groups.Remove the resources noted in step #1 from the default security group.Remove all inbound and outbound allow rules from the default security group.For more information, see Security Groups for Your VPC in the Amazon Virtual Private Cloud User Guide.\"",
+            "risk_level":"Medium",
+            "updated_at":"2017-04-07T21:22:07.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/131/disabled_external_accounts.json"
+               }
+            }
+         }
+      },
+      {  
+         "id":"24",
+         "type":"signatures",
+         "attributes":{  
+            "created_at":"2014-06-05T23:43:30.000Z",
+            "description":"\"Use VPC NACLs to minimize the allowed traffic flows between VPC Subnets\"",
+            "identifier":"AWS:VPC-003",
+            "name":"VPC Subnet NACLs",
+            "resolution":"\"VPCs permit Layer 3 network traffic filtering leveraging Network Access Control Lists (NACLs). These act similarly to traffic filtering rules you could put on a traditional router or gateway device in a traditional network. We recommend that you configure at least one base NACL for each VPC permitting only the type(s) of traffic you know you will have traversing to and from your VPC. Please review this document from AWS, describing how NACLs work. Since these NACLs are stateless, you need to explicitely permit inbound and outbound communication paths for your services to properly function. We recommend building stringent cross-subnet NACLs inside your VPC to reduce permitted traffic solely to the desired protocols and ports for your application to operate. This greatly minimizes the capabilities of attackers should they take control of a machine inside your VPC.\"",
+            "risk_level":"Low",
+            "updated_at":"2016-02-24T19:59:54.000Z"
+         },
+         "relationships":{  
+            "service":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/services/1.json"
+               }
+            },
+            "disabled_external_accounts":{  
+               "links":{  
+                  "related":"https://esp.evident.io/api/v2/signatures/24/disabled_external_accounts.json"
+               }
+            }
+         }
+      }
+   ]
+}
